@@ -88,7 +88,7 @@ npx tsc --init
 
 ```json
 {
-	"jsx": "react-jsx"
+  "jsx": "react-jsx"
 }
 ```
 
@@ -114,12 +114,12 @@ npx eslint --init
 
 ```jsx
 {
-	// ...
-	rules: {
-	  // ...
-		jest: true
-	}
-	// ...
+    // ...
+    rules: {
+        // ...
+        jest: true
+    }
+    // ...
 }
 ```
 
@@ -151,30 +151,30 @@ npm i -D jest @types/jest @swc/core @swc/jest \
 
 ```jsx
 module.exports = {
-	testEnvironment: 'jsdom',
-	setupFilesAfterEnv: [
-		'@testing-library/jest-dom/extend-expect',
-	],
-	transform: {
-		'^.+\\.(t|j)sx?$': ['@swc/jest', {
-			jsc: {
-				parser: {
-					syntax: 'typescript',
-					jsx: true,
-					decorators: true,
-				},
-				transform: {
-					react: {
-						runtime: 'automatic',
-					},
-				},
-			},
-		}],
-	},
-	testPathIgnorePatterns: [
-		'<rootDir>/node_modules/',
-		'<rootDir>/dist/',
-	],
+    testEnvironment: 'jsdom',
+    setupFilesAfterEnv: [
+        '@testing-library/jest-dom/extend-expect',
+    ],
+    transform: {
+        '^.+\\.(t|j)sx?$': ['@swc/jest', {
+            jsc: {
+                parser: {
+                    syntax: 'typescript',
+                    jsx: true,
+                    decorators: true,
+                },
+                transform: {
+                    react: {
+                        runtime: 'automatic',
+                    },
+                },
+            },
+        }],
+    },
+    testPathIgnorePatterns: [
+        '<rootDir>/node_modules/',
+        '<rootDir>/dist/',
+    ],
 };
 ```
 
@@ -188,16 +188,16 @@ npm i -D parcel
 
 ```json
 {
-	"source" : "./index.html",
-	"scripts": {
-		"start": "parcel --port 8080",
+  "source" : "./index.html",
+  "scripts": {
+    "start": "parcel --port 8080",
     "build": "parcel build",
     "check": "tsc --noEmit",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "test": "jest",
     "coverage": "jest --coverage --coverage-reporters html",
     "watch:test": "jest --watchAll"
-	}
+  }
 }
 ```
 
@@ -207,15 +207,15 @@ npm i -D parcel
 ```html
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>React Demo App</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <p>Hello. world!</p>
-        <script type="module" src="./src/main.tsx"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>React Demo App</title>
+</head>
+<body>
+<div id="root"></div>
+<p>Hello. world!</p>
+<script type="module" src="./src/main.tsx"></script>
+</body>
 </html>
 ```
 
@@ -225,17 +225,17 @@ npm i -D parcel
 import ReactDOM from 'react-dom/client';
 
 function App() {
-	return (
-		<p>Hello, world!</p>
-	);
+    return (
+        <p>Hello, world!</p>
+    );
 }
 
 const element = document.getElementById('root');
 
 if (element) {
-	const root = ReactDOM.createRoot(element);
+    const root = ReactDOM.createRoot(element);
 
-	root.render(<App/>);
+    root.render(<App/>);
 }
 ```
 
