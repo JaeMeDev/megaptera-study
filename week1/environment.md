@@ -113,13 +113,24 @@ npx eslint --init
 8. `.eslint.js` 파일을 적절히 수정(아직 Jest를 설치하지 않았지만 미리 `jest:true` 를 잡아주면 좋다.)
 
 ```jsx
-{
-    // ...
-    rules: {
-        // ...
-        jest: true
-    }
-    // ...
+module.exports = {
+   env: {
+      browser: true,
+      es2021: true,
+      // 추가
+      jest: true,
+   },
+   extends: [
+      'plugin:react/recommended',
+      // 추가
+      'plugin:react/jsx-runtime',
+      'xo',
+   ],
+   settings: {
+      react: {
+         version: "detect"
+      }
+   },
 }
 ```
 
