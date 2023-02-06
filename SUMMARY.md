@@ -8,3 +8,5 @@
   - [🌈 4. Testing Library](week1/testing-library.md)
   - [🌈 5. Parcel & ESLint](week1/parcel-eslint.md)
   - [💯 과제](week1/assignment.md)
+- [🎯 2주차](week2/README.md)
+  - [🌈 1. JSX](week2/jsx.md)
