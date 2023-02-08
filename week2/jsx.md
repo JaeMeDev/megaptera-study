@@ -146,3 +146,49 @@ root.render((
 - [VDOM 문서](https://ko.reactjs.org/docs/faq-internals.html)
     - 이 접근방식이 React의 **선언적 API**를 가능하게 한다.
 - VDOM이 무엇이고, 왜 쓰는지 안다면 활용할 수 있는 [최적화 기법](https://ko.reactjs.org/docs/optimizing-performance.html)이 존재한다.
+
+## 🚘 1-6. 재미로 만들어보는 React
+
+- [전체코드](https://github.com/JaeMeDev/tiny-react)
+- 아직 `Diff 알고리즘` 적용 전이라 vdom의 성능상 이점을 가져오지 못하고 있다. 추후 `Diff 알고리즘` 을 적용해보자.
+
+```jsx
+/* @jsx createElement */
+function renderElement(node) {
+  if (typeof node === "string") {
+    return document.createTextNode(node);
+  }
+
+  if (node === undefined) return;
+
+  const $el = document.createElement(node.type);
+
+  node.children.map(renderElement).forEach((element) => {
+    $el.appendChild(element);
+  });
+
+  return $el;
+}
+
+function render(vdom, container) {
+  container.appendChild(renderElement(vdom));
+}
+
+function createElement(type, props, ...children) {
+  if (typeof type === "function") {
+    return type.apply(null, [props, ...children]);
+  }
+  return { type, props, children };
+}
+
+function App() {
+  return (
+    <div>
+      <h1>메가테라 프론트엔드</h1>
+      <h2>안녕하세요</h2>
+    </div>
+  );
+}
+
+render(<App />, document.getElementById("root"));
+```
