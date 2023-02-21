@@ -17,4 +17,4 @@
   - [🌈 2. Fetch API & CORS](week4/fetch-cors.md)
   - [🌈 3. React의 Hook](week4/react-hook.md)
   - [🌈 4. useRef & Custom Hook](week4/useref-custom-hook.md)
-  - [🌈 5. usehook-ts](week4/usehooks-ts.md)
+  - [🌈 5. usehooks-ts](week4/usehooks-ts.md)
