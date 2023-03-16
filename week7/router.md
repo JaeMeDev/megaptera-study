@@ -58,7 +58,7 @@ root.render((
 - [createMemoryRouter](https://reactrouter.com/en/main/routers/create-memory-router)
 
 ```tsx
-describe('routes'', () => {	
+describe('routes', () => {	
 	function renderRouter(path: string) {
 		const router = createMemoryRouter(routes, { initialEntries: [path] });
 		render(<RouterProvider router={router} />);
