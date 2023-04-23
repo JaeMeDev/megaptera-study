@@ -53,3 +53,5 @@
   - [🌈 4. 주문 목록 & 주문 상세](week10/order-detail.md)
 - [🎯 11주차](week11/README.md)
   - [🌈 1. 배송 정보 입력](week11/shopping-information.md)
+  - [🌈 2. 포트원 결제 요청](week11/portone.md)
+  - [🌈 3. 배송 및 결제 정보 전달](week11/delivery.md)
